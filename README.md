@@ -1,22 +1,23 @@
 DOM4 Elements
 =============
 
-A polyfill for the [Elements class] in [DOM Level 4], as well as `.query` and `.queryAll`
-methods for Elements, Element, Document, and DocumentFragment.
-
-[![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
-](https://ci.testling.com/barberboy/dom4-elements)
+DOM4 Elements is a polyfill that allows you to use the new `.query` and `.queryAll`
+methods newly added to [DOM Level 4]. `queryAll` returns an instance of the new 
+[Elements class] which extends Array, allowing you to use map, reduce, filter,
+forEach, and the like on the returned elements.
 
 [Elements class]: http://www.w3.org/TR/dom/#collections:-elements
 [DOM Level 4]: http://www.w3.org/TR/dom/
 
+[![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
+](https://ci.testling.com/barberboy/dom4-elements)
+
 Background
 ----------
 
-DOM 4 added [query] and [queryAll] methods to Document, Element, and DocumentFragment
-which return a new class, [Elements], that extends Array. This allows you to 
-use map, filter, reduce, forEach, and the like directly on the elements array
-returned from `.queryAll`.
+DOM 4 added [query] and [queryAll] methods to the ParentNode interface, which is
+implemented by  Document, Element, and DocumentFragment. It also defined a new
+class, [Elements], which extends Array and also has query and queryAll.
 
 [Elements]: http://www.w3.org/TR/dom/#collections:-elements
 [query]: http://www.w3.org/TR/dom/#dom-parentnode-query
@@ -24,6 +25,25 @@ returned from `.queryAll`.
 
 Usage
 -----
+
+You can install the `dom4-elements` package with either npm or bower, or directly
+download [dom4-elements.js] or [dom4-elements.min.js] and include them in your project.
+
+    bower install dom4-elements
+
+or 
+
+    npm install dom4-elements
+
+[dom4-elements.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.2/lib/dom4-elements.js
+[dom4-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.2/lib/dom4-elements.min.js
+
+You are also welcome to clone the repo directly and use the dom4-elements.js or 
+dom4-elements.min.js in the `lib` directory. 
+
+    git clone https://github.com/barberboy/dom4-elements
+    make init
+    make build
 
 ### .query(selector)
 

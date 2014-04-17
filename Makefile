@@ -17,7 +17,7 @@ $(LIB)/%.min.js : $(LIB)/%.js
 test: build
 	$(PHANTOMJS) $(QUNITJS) $(TEST)/index.html 2> /dev/null
 
-install:
+init:
 	npm install
 
-.PHONY: test install
+.PHONY: test init

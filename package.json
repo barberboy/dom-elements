@@ -1,0 +1,60 @@
+{
+  "name": "dom4-elements",
+  "version": "0.0.1",
+  "description": "Polyfill for Elements class and query/queryAll additions in DOM4.",
+  "keywords": [
+    "DOM",
+    "Level 4",
+    "browser",
+    "polyfill",
+    "shim",
+    "elements",
+    "query",
+    "queryAll",
+    "dom4"
+  ],
+  "homepage": "https://github.com/barberboy/dom4-elements",
+  "bugs": "https://github.com/barberboy/dom4-elements/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barberboy/dom4-elements.git"
+  },
+  "main": "lib/dom4-elements.js",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "src": "src",
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {
+    "uglify-js": "~2.4.13",
+    "qunitjs": "~1.14.0",
+    "qunit-tap": "~1.4.2"
+  },
+  "scripts": {
+    "prepublish": "make build",
+    "test": "make test"
+  },
+  "testling": {
+    "html": "test/index.html",
+    "browsers": [
+      "ie/9..10"
+      "firefox/3.5",
+      "firefox/latest",
+      "chrome/latest",
+      "safari/5..latest",
+      "opera/10",
+      "opera/next",
+      "iphone/4..latest",
+      "ipad/4..latest",
+      "android-browser/4..latest"
+    ]
+  }
+  "author": {
+    "name": "Benjamin Barber",
+    "url": "http://twitter.com/barberboy"
+  },
+  "license": "MIT"
+}

@@ -1,7 +1,7 @@
 DOM4 Elements
 =============
 
-DOM4 Elements is a polyfill that allows you to use the new `.query` and `.queryAll`
+DOM4 Elements is a polyfill that allows you to use the `.query` and `.queryAll`
 methods newly added to [DOM Level 4]. `queryAll` returns an instance of the new 
 [Elements class] which extends Array, allowing you to use map, reduce, filter,
 forEach, and the like on the returned elements.
@@ -29,7 +29,7 @@ Usage
 You can install the `dom4-elements` package with either npm or bower, or directly
 download [dom4-elements.js] or [dom4-elements.min.js] and include them in your project.
 
-    bower install dom4-elements
+    bower install https://github.com/barberboy/dom4-elements.git
 
 or 
 

@@ -1,19 +1,26 @@
 DOM4 Elements
 =============
 
-A polyfill for the Elements class in DOM Level 4, as well as .query and .queryAll
+A polyfill for the [Elements class] in [DOM Level 4], as well as `.query` and `.queryAll`
 methods for Elements, Element, Document, and DocumentFragment.
 
 [![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
 ](https://ci.testling.com/barberboy/dom4-elements)
 
+[Elements class]: http://www.w3.org/TR/dom/#collections:-elements
+[DOM Level 4]: http://www.w3.org/TR/dom/
+
 Background
 ----------
 
-DOM 4 added `.query` and `.queryAll` methods to Document, Element, and DocumentFragment
-which return a new class, Elements, which extends from Array. This allows you to 
-use .map, .filter, .reduce, .forEach, and the like directly on the elements array
+DOM 4 added [query] and [queryAll] methods to Document, Element, and DocumentFragment
+which return a new class, [Elements], that extends Array. This allows you to 
+use map, filter, reduce, forEach, and the like directly on the elements array
 returned from `.queryAll`.
+
+[Elements]: http://www.w3.org/TR/dom/#collections:-elements
+[query]: http://www.w3.org/TR/dom/#dom-parentnode-query
+[queryAll]: http://www.w3.org/TR/dom/#dom-parentnode-queryall
 
 Usage
 -----

@@ -4,6 +4,9 @@ DOM4 Elements
 A polyfill for the Elements class in DOM Level 4, as well as .query and .queryAll
 methods for Elements, Element, Document, and DocumentFragment.
 
+[![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
+](https://ci.testling.com/barberboy/dom4-elements)
+
 Background
 ----------
 

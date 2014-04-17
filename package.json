@@ -1,6 +1,6 @@
 {
   "name": "dom4-elements",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Polyfill for Elements class and query/queryAll additions in DOM4.",
   "keywords": [
     "DOM",

@@ -40,7 +40,7 @@
   "testling": {
     "html": "test/index.html",
     "browsers": [
-      "ie/9..10"
+      "ie/9..10",
       "firefox/3.5",
       "firefox/latest",
       "chrome/latest",
@@ -51,7 +51,7 @@
       "ipad/4..latest",
       "android-browser/4..latest"
     ]
-  }
+  },
   "author": {
     "name": "Benjamin Barber",
     "url": "http://twitter.com/barberboy"

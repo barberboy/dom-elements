@@ -42,8 +42,8 @@
     "browsers": [
       "iexplore/9.0..latest",
       "chrome/15.0..latest",
-      "firefox/3.5..latest",
-      "opera/10.0..latest",
+      "firefox/4..latest",
+      "opera/12.0..latest",
       "safari/5.0.5..latest",
       "firefox/nightly",
       "opera/next",

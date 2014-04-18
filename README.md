@@ -35,8 +35,8 @@ or
 
     npm install dom4-elements
 
-[dom4-elements.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.2/lib/dom4-elements.js
-[dom4-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.2/lib/dom4-elements.min.js
+[dom4-elements.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.3/lib/dom4-elements.js
+[dom4-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.3/lib/dom4-elements.min.js
 
 You are also welcome to clone the repo directly and use the dom4-elements.js or 
 dom4-elements.min.js in the `lib` directory. 
@@ -60,11 +60,11 @@ selector, or null if there isn't one that matches.
 the Elements class. It will return an instance of Elements that contains descendants
 that match the passed selector, or an instance with no elements if there are no matches.
 
-    var collapsible = document.queryAll('.collapsible');
-    collapsible.forEach(function(section){
-      var heading = section.query('h1,h2,h3,h4,h5,h6');
+    var collapsibles = document.queryAll('.collapsible');
+    collapsibles.forEach(function(collapsible){
+      var heading = collapsible.query('h1,h2,h3,h4,h5,h6');
       heading.addEventListener('click', function(event) {
-        section.classList.toggle('collapsed');
+        collapsible.classList.toggle('collapsed');
       }, false);
     });
 
@@ -72,7 +72,7 @@ that match the passed selector, or an instance with no elements if there are no 
     var sections = document.queryAll('section');
     var headingLinks = sections.queryAll(':any(h1,h2,h3,h4,h5,h6) a');
 
-### Elements (class)
+### Elements class
 
 The Elements class is a subclass of Array that holds DOM elements. It isn't used
 directly, but is returned by the .queryAll methods on document, element, and 
@@ -88,15 +88,12 @@ elements.
 Caveats
 -------
 
-* Since we use querySelectorAll and ES5 Array methods, this shim will not work in IE8
-  and below.
-* This is not a complete implemantation, and does not have support for CSS selectors
+* Since we use querySelectorAll and ES5 Array methods, this shim will not work in
+  IE8 and below. See our browser support list at
+  <https://ci.testling.com/barberboy/dom4-elements>.
+* This is not a complete implementation and does not have support for CSS selectors
   that start with a child selector. See [Absolutizing a Relative Selector] if you are 
   interested in adding that as an enhancement.
-* For convenience, the Elements constructor can accept a NodeList containing elements
-  to wrap. This is non-standard behavior and should not be used. Since we don't
-  redefine Elements if it exists, your code will break when browsers implement
-  Elements.
 
 [Absolutizing a Relative Selector]: http://dev.w3.org/csswg/selectors/#absolutizing
 

@@ -40,16 +40,17 @@
   "testling": {
     "html": "test/index.html",
     "browsers": [
-      "ie/9..10",
-      "firefox/3.5",
-      "firefox/latest",
-      "chrome/latest",
-      "safari/5..latest",
-      "opera/10",
+      "iexplore/9.0..latest",
+      "chrome/15.0..latest",
+      "firefox/3.5..latest",
+      "opera/10.0..latest",
+      "safari/5.0.5..latest",
+      "firefox/nightly",
       "opera/next",
-      "iphone/4..latest",
-      "ipad/4..latest",
-      "android-browser/4..latest"
+      "chrome/canary",
+      "iphone/6.0..latest",
+      "ipad/6.0..latest",
+      "android-browser/4.2..latest"
     ]
   },
   "author": {

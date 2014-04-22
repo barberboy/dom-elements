@@ -1,13 +1,13 @@
-DOM4 Elements
+DOM Elements
 =============
 
-DOM4 Elements is a polyfill that allows you to use the `.query` and `.queryAll`
-methods newly added to [DOM Level 4]. `queryAll` returns an instance of the new 
+DOM Elements is a polyfill that allows you to use the `.query` and `.queryAll`
+methods newly added to [the DOM Standard]. `queryAll` returns an instance of the new 
 [Elements class] which extends Array, allowing you to use map, reduce, filter,
 forEach, and the like on the returned elements.
 
-[Elements class]: http://www.w3.org/TR/dom/#collections:-elements
-[DOM Level 4]: http://www.w3.org/TR/dom/
+[Elements class]: http://dom.spec.whatwg.org/#collections:-elements
+[DOM Level 4]: http://dom.spec.whatwg.org
 
 [![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
 ](https://ci.testling.com/barberboy/dom4-elements)
@@ -15,13 +15,13 @@ forEach, and the like on the returned elements.
 Background
 ----------
 
-DOM 4 added [query] and [queryAll] methods to the ParentNode interface, which is
+The DOM Standard added [query] and [queryAll] methods to the ParentNode interface, which is
 implemented by  Document, Element, and DocumentFragment. It also defined a new
 class, [Elements], which extends Array and also has query and queryAll.
 
-[Elements]: http://www.w3.org/TR/dom/#collections:-elements
-[query]: http://www.w3.org/TR/dom/#dom-parentnode-query
-[queryAll]: http://www.w3.org/TR/dom/#dom-parentnode-queryall
+[Elements]: http://dom.spec.whatwg.org/#collections:-elements
+[query]: http://dom.spec.whatwg.org/#dom-parentnode-query
+[queryAll]: http://dom.spec.whatwg.org/#dom-parentnode-queryall
 
 Usage
 -----

@@ -7,7 +7,7 @@ methods newly added to [the DOM Standard]. `queryAll` returns an instance of the
 forEach, and the like on the returned elements.
 
 [Elements class]: http://dom.spec.whatwg.org/#collections:-elements
-[DOM Level 4]: http://dom.spec.whatwg.org
+[the DOM Standard]: http://dom.spec.whatwg.org
 
 [![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
 ](https://ci.testling.com/barberboy/dom4-elements)
@@ -27,21 +27,21 @@ Usage
 -----
 
 You can install the `dom4-elements` package with either npm or bower, or directly
-download [dom4-elements.js] or [dom4-elements.min.js] and include them in your project.
+download [dom-elements.js] or [dom-elements.min.js] and include them in your project.
 
-    bower install https://github.com/barberboy/dom4-elements.git
+    bower install https://github.com/barberboy/dom-elements.git
 
 or 
 
     npm install dom4-elements
 
-[dom4-elements.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.3/lib/dom4-elements.js
-[dom4-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom4-elements/0.0.3/lib/dom4-elements.min.js
+[dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom4-elements.js
+[dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom4-elements.min.js
 
 You are also welcome to clone the repo directly and use the dom4-elements.js or 
 dom4-elements.min.js in the `lib` directory. 
 
-    git clone https://github.com/barberboy/dom4-elements
+    git clone https://github.com/barberboy/dom-elements
     make init
     make build
 
@@ -90,7 +90,7 @@ Caveats
 
 * Since we use querySelectorAll and ES5 Array methods, this shim will not work in
   IE8 and below. See our browser support list at
-  <https://ci.testling.com/barberboy/dom4-elements>.
+  <https://ci.testling.com/barberboy/dom-elements>.
 * This is not a complete implementation and does not have support for CSS selectors
   that start with a child selector. See [Absolutizing a Relative Selector] if you are 
   interested in adding that as an enhancement.

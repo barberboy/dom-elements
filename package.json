@@ -1,7 +1,7 @@
 {
-  "name": "dom4-elements",
+  "name": "dom-elements",
   "version": "0.0.3",
-  "description": "Polyfill for Elements class and query/queryAll additions in DOM4.",
+  "description": "Polyfill for Elements class and query/queryAll additions to the DOM standard.",
   "keywords": [
     "DOM",
     "Level 4",
@@ -13,13 +13,13 @@
     "queryAll",
     "dom4"
   ],
-  "homepage": "https://github.com/barberboy/dom4-elements",
-  "bugs": "https://github.com/barberboy/dom4-elements/issues",
+  "homepage": "https://github.com/barberboy/dom-elements",
+  "bugs": "https://github.com/barberboy/dom-elements/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/barberboy/dom4-elements.git"
+    "url": "https://github.com/barberboy/dom-elements.git"
   },
-  "main": "lib/dom4-elements.js",
+  "main": "lib/dom-elements.js",
   "files": [
     "lib"
   ],

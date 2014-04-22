@@ -1,16 +1,17 @@
 {
-  "name": "dom4-elements",
+  "name": "dom-elements",
   "version": "0.0.3",
   "authors": [
     "Ben Barber <barberboy@gmail.com>"
   ],
-  "description": "Polyfill for DOM4 Elements, .query(), and .queryAll()",
-  "main": "lib/dom4-elements.js",
+  "description": "Polyfill for Elements, .query(), and .queryAll() additions to the DOM Standard",
+  "main": "lib/dom-elements.js",
   "moduleType": [
     "globals"
   ],
   "keywords": [
     "dom4",
+    "dom",
     "elements",
     "query",
     "queryAll",
@@ -18,7 +19,7 @@
     "shim"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/barberboy/dom4-elements",
+  "homepage": "https://github.com/barberboy/dom-elements",
   "ignore": [
     "**/.*",
     "node_modules",

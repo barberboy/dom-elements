@@ -9,8 +9,8 @@ forEach, and the like on the returned elements.
 [Elements class]: http://dom.spec.whatwg.org/#collections:-elements
 [the DOM Standard]: http://dom.spec.whatwg.org
 
-[![browser support](https://ci.testling.com/barberboy/dom4-elements.png)
-](https://ci.testling.com/barberboy/dom4-elements)
+[![browser support](https://ci.testling.com/barberboy/dom-elements.png)
+](https://ci.testling.com/barberboy/dom-elements)
 
 Background
 ----------
@@ -26,20 +26,20 @@ class, [Elements], which extends Array and also has query and queryAll.
 Usage
 -----
 
-You can install the `dom4-elements` package with either npm or bower, or directly
+You can install the `dom-elements` package with either npm or bower, or directly
 download [dom-elements.js] or [dom-elements.min.js] and include them in your project.
 
     bower install https://github.com/barberboy/dom-elements.git
 
 or 
 
-    npm install dom4-elements
+    npm install dom-elements
 
-[dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom4-elements.js
-[dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom4-elements.min.js
+[dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom-elements.js
+[dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom-elements.min.js
 
-You are also welcome to clone the repo directly and use the dom4-elements.js or 
-dom4-elements.min.js in the `lib` directory. 
+You are also welcome to clone the repo directly and use the dom-elements.js or 
+dom-elements.min.js in the `lib` directory. 
 
     git clone https://github.com/barberboy/dom-elements
     make init

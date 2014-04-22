@@ -6,7 +6,7 @@ LIB:=lib
 TEST:=test
 SRC:=src
 
-build: lib/dom4-elements.js lib/dom4-elements.min.js
+build: lib/dom-elements.js lib/dom-elements.min.js
 
 $(LIB)/%.js: $(SRC)/%.js
 	cp $< $@

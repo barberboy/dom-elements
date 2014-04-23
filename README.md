@@ -29,7 +29,7 @@ Usage
 You can install the `dom-elements` package with either npm or bower, or directly
 download [dom-elements.js] or [dom-elements.min.js] and include them in your project.
 
-    bower install https://github.com/barberboy/dom-elements.git
+    bower install dom-elements
 
 or 
 
@@ -43,7 +43,6 @@ dom-elements.min.js in the `lib` directory.
 
     git clone https://github.com/barberboy/dom-elements
     make init
-    make build
 
 ### .query(selector)
 

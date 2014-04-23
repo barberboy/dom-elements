@@ -90,10 +90,18 @@ Caveats
 * Since we use querySelectorAll and ES5 Array methods, this shim will not work in
   IE8 and below. See our browser support list at
   <https://ci.testling.com/barberboy/dom-elements>.
-* This is not a complete implementation and does not have support for CSS selectors
-  that start with a child selector. See [Absolutizing a Relative Selector] if you are 
-  interested in adding that as an enhancement.
+* The selectors passed to .query and .queryAll are currently evaluated *relative to 
+  the document*. According to [the spec], they should be [Relative Selectors] which are
+  scoped to the element(s). See [issue #2] for additional information, and
+  [Absolutizing a Relative Selector] if you're interested in adding that as an
+  enhancement.
+* Similarly, this implementation currently does not have support for CSS selectors
+  that start with a child selector. Implementing proper support for [Relative Selectors] 
+  will resolve this as well.
 
+[Relative Selectors]: http://dev.w3.org/csswg/selectors/#relative
+[the spec]: http://dom.spec.whatwg.org/#match-a-relative-selectors-string
+[issue #2]: https://github.com/barberboy/dom-elements/issues/2
 [Absolutizing a Relative Selector]: http://dev.w3.org/csswg/selectors/#absolutizing
 
 To Do

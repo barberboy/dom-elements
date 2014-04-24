@@ -1,6 +1,6 @@
 {
   "name": "dom-elements",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Polyfill for Elements class and query/queryAll additions to the DOM standard.",
   "keywords": [
     "DOM",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "https://github.com/barberboy/dom-elements.git"
   },
-  "main": "lib/dom-elements.js",
+  "main": "src/index.js",
   "files": [
     "lib"
   ],
@@ -29,16 +29,20 @@
     "test": "test"
   },
   "devDependencies": {
-    "uglify-js": "~2.4.13",
-    "qunitjs": "~1.14.0",
-    "qunit-tap": "~1.4.2"
+    "tape": "^2.12.3",
+    "gulp-browserify": "^0.5.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-jshint": "^1.5.5",
+    "gulp": "^3.6.2",
+    "jshint-stylish": "^0.1.5",
+    "gulp-rename": "^1.2.0"
   },
   "scripts": {
-    "prepublish": "make build",
-    "test": "make test"
+    "start" : "gulp",
+    "test": "gulp lint && testling"
   },
   "testling": {
-    "html": "test/index.html",
+    "files": "test/**/*.js",
     "browsers": [
       "iexplore/9.0..latest",
       "chrome/15.0..latest",

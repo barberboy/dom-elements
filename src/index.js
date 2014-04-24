@@ -1,10 +1,13 @@
 var methods = require('./methods');
-var isNative = require('./utils/isNative');
+var isNative = require('./utils/is-native');
+var array = [];
 
-if (typeof Document === 'undefined'
-      || !('map' in arrayPrototype)
-      || !('reduce' in arrayPrototype)
-      || !('querySelectorAll' in document)) {
+if (
+  typeof Document === 'undefined' ||
+  !('map' in array) ||
+  !('reduce' in array) ||
+  !('querySelectorAll' in document)
+) {
   throw new TypeError('Missing browser features to initiantiate dom-elements');
 }
 

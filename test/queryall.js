@@ -21,5 +21,13 @@ tape('query-all', function (test) {
     void 0,
     'is scoped'
   );
+  test.equal(
+    methods.queryAll.call(element, '> .foo')[0],
+    element.children[0]
+  );
+  test.equal(
+    methods.queryAll.call(element, '> .foo:first-child i')[0].tagName,
+    'I'
+  );
   test.end();
 });

@@ -1,5 +1,12 @@
 var methods = require('./methods');
-var isNative = require('./methods');
+var isNative = require('./utils/isNative');
+
+if (typeof Document === 'undefined'
+      || !('map' in arrayPrototype)
+      || !('reduce' in arrayPrototype)
+      || !('querySelectorAll' in document)) {
+  throw new TypeError('Missing browser features to initiantiate dom-elements');
+}
 
 if('Element' in window) {
   if(!isNative(Element.prototype, 'query')) {

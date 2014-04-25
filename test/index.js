@@ -9,6 +9,10 @@ tape('dom-elements', function (test) {
   if('Document' in window) {
     test.equal(typeof Document.prototype.query, 'function');
     test.equal(typeof Document.prototype.queryAll, 'function');
+    test.equal(
+      typeof document.queryAll('body').queryAll,
+      'function'
+    );
   }
   if('DocumentFragment' in window) {
     test.equal(typeof DocumentFragment.prototype.query, 'function');

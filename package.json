@@ -61,5 +61,8 @@
     "name": "Benjamin Barber",
     "url": "http://twitter.com/barberboy"
   },
+  "contributors": [
+    "Matthias Le Brun (http://https://github.com/bloodyowl)"
+  ],
   "license": "MIT"
 }

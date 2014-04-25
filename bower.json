@@ -1,6 +1,6 @@
 {
   "name": "dom-elements",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "authors": [
     "Ben Barber <barberboy@gmail.com>"
   ],
@@ -24,7 +24,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "Makefile",
+    "gulpfile.js",
     "src",
     "package.json",
     "test",

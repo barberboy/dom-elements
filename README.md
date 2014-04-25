@@ -35,14 +35,15 @@ or
 
     npm install dom-elements
 
-[dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom-elements.js
-[dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom-elements.min.js
+[dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.1.0/lib/dom-elements.js
+[dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.1.0/lib/dom-elements.min.js
 
 You are also welcome to clone the repo directly and use the dom-elements.js or
 dom-elements.min.js in the `lib` directory.
 
     git clone https://github.com/barberboy/dom-elements
-    make init
+    npm install
+    npm start
 
 ### .query(selector)
 
@@ -56,7 +57,7 @@ selector, or null if there isn't one that matches.
 ### .queryAll(selector)
 
 .queryAll is available on document, documentFragments, individual DOM elements and
-the Elements class. It will return an instance of Elements that contains descendants
+the Elements class. It will return a new instance of Elements containing descendants
 that match the passed selector, or an instance with no elements if there are no matches.
 
     var collapsibles = document.queryAll('.collapsible');
@@ -71,30 +72,21 @@ that match the passed selector, or an instance with no elements if there are no 
     var sections = document.queryAll('section');
     var headingLinks = sections.queryAll(':any(h1,h2,h3,h4,h5,h6) a');
 
-### Elements class
-
-The Elements class is a subclass of Array that holds DOM elements. It isn't used
-directly, but is returned by the .queryAll methods on document, element, and
-elements.
-
-    var sections = document.queryAll("section");
-    sections.forEach(function(section){
-        // Do something with each section
-        section.classList.add('visible');
-        section.query('h3').classList.add('visible-heading');
-    });
-
 Caveats
 -------
 
 * Since we use querySelectorAll and ES5 Array methods, this shim will not work in
   IE8 and below. See our browser support list at
   <https://ci.testling.com/barberboy/dom-elements>.
+* This shim (despite it's name—ha!) does not expose the Elements constructor
+  function since there isn't a compelling use-case for instantiating it
+  directly.
+* Support for [Relative Selectors] was added in version [0.1.0][issue #2] by
+  @bloodyowl.
+
 
 [Relative Selectors]: http://dev.w3.org/csswg/selectors/#relative
-[the spec]: http://dom.spec.whatwg.org/#match-a-relative-selectors-string
 [issue #2]: https://github.com/barberboy/dom-elements/issues/2
-[Absolutizing a Relative Selector]: http://dev.w3.org/csswg/selectors/#absolutizing
 
 
 License

@@ -2,9 +2,9 @@ DOM Elements
 =============
 
 DOM Elements is a polyfill that allows you to use the `.query` and `.queryAll`
-methods newly added to [the DOM Standard]. `queryAll` returns an instance of the new
-[Elements class] which extends Array, allowing you to use map, reduce, filter,
-forEach, and the like on the returned elements.
+methods newly added to [the DOM Standard]. `queryAll` returns an instance of the
+new [Elements class] which extends Array, allowing you to use map, reduce,
+filter, forEach, and the like on the returned elements.
 
 [Elements class]: http://dom.spec.whatwg.org/#collections:-elements
 [the DOM Standard]: http://dom.spec.whatwg.org
@@ -15,9 +15,10 @@ forEach, and the like on the returned elements.
 Background
 ----------
 
-The DOM Standard added [query] and [queryAll] methods to the ParentNode interface, which is
-implemented by  Document, Element, and DocumentFragment. It also defined a new
-class, [Elements], which extends Array and also has query and queryAll.
+The DOM Standard added [query] and [queryAll] methods to the ParentNode
+interface, which is implemented by  Document, Element, and DocumentFragment. It
+also defined a new class, [Elements], which extends Array and also has query and
+ queryAll.
 
 [Elements]: http://dom.spec.whatwg.org/#collections:-elements
 [query]: http://dom.spec.whatwg.org/#dom-parentnode-query
@@ -27,7 +28,8 @@ Usage
 -----
 
 You can install the `dom-elements` package with either npm or bower, or directly
-download [dom-elements.js] or [dom-elements.min.js] and include them in your project.
+download [dom-elements.js] or [dom-elements.min.js] and include them in your
+project.
 
     bower install dom-elements
 
@@ -47,18 +49,21 @@ dom-elements.min.js in the `lib` directory.
 
 ### .query(selector)
 
-`.query()` is available on document, documentFragments, individual DOM elements, and
-the Elements class. It will return the first descendant element which matches the
-selector, or null if there isn't one that matches.
+`.query()` is available on document, documentFragments, individual DOM elements,
+and the Elements class. It will return the first descendant element which
+matches the selector, or null if there are zero matches.
 
     var siteHeader = document.query('header');
-    var active = siteHeader.query('.site-menu .active');
+    if (siteHeader) {
+      var active = siteHeader.query('.site-menu .active');
+    }
 
 ### .queryAll(selector)
 
-.queryAll is available on document, documentFragments, individual DOM elements and
-the Elements class. It will return a new instance of Elements containing descendants
-that match the passed selector, or an instance with no elements if there are no matches.
+.queryAll is available on document, documentFragments, individual DOM elements
+and the Elements class. It will return a new instance of Elements containing
+descendants that match the passed selector, or an instance with no elements if
+there are no matches.
 
     var collapsibles = document.queryAll('.collapsible');
     collapsibles.forEach(function(collapsible){
@@ -75,19 +80,17 @@ that match the passed selector, or an instance with no elements if there are no 
 Caveats
 -------
 
-* Since we use querySelectorAll and ES5 Array methods, this shim will not work in
-  IE8 and below. See our browser support list at
+* Since we use querySelectorAll and ES5 Array methods, this shim will not work
+  in IE8 and below. See the browser support list at
   <https://ci.testling.com/barberboy/dom-elements>.
 * This shim (despite it's name—ha!) does not expose the Elements constructor
   function since there isn't a compelling use-case for instantiating it
   directly.
-* Support for [Relative Selectors] was added in version [0.1.0][issue #2] by
-  @bloodyowl.
-
+* **Update:** Support for [Relative Selectors] was added in version
+  [0.1.0][issue #2] by @bloodyowl.
 
 [Relative Selectors]: http://dev.w3.org/csswg/selectors/#relative
 [issue #2]: https://github.com/barberboy/dom-elements/issues/2
-
 
 License
 -------

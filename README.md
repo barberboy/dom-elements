@@ -2,7 +2,7 @@ DOM Elements
 =============
 
 DOM Elements is a polyfill that allows you to use the `.query` and `.queryAll`
-methods newly added to [the DOM Standard]. `queryAll` returns an instance of the new 
+methods newly added to [the DOM Standard]. `queryAll` returns an instance of the new
 [Elements class] which extends Array, allowing you to use map, reduce, filter,
 forEach, and the like on the returned elements.
 
@@ -31,15 +31,15 @@ download [dom-elements.js] or [dom-elements.min.js] and include them in your pro
 
     bower install dom-elements
 
-or 
+or
 
     npm install dom-elements
 
 [dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom-elements.js
 [dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.0.3/lib/dom-elements.min.js
 
-You are also welcome to clone the repo directly and use the dom-elements.js or 
-dom-elements.min.js in the `lib` directory. 
+You are also welcome to clone the repo directly and use the dom-elements.js or
+dom-elements.min.js in the `lib` directory.
 
     git clone https://github.com/barberboy/dom-elements
     make init
@@ -74,7 +74,7 @@ that match the passed selector, or an instance with no elements if there are no 
 ### Elements class
 
 The Elements class is a subclass of Array that holds DOM elements. It isn't used
-directly, but is returned by the .queryAll methods on document, element, and 
+directly, but is returned by the .queryAll methods on document, element, and
 elements.
 
     var sections = document.queryAll("section");
@@ -90,25 +90,12 @@ Caveats
 * Since we use querySelectorAll and ES5 Array methods, this shim will not work in
   IE8 and below. See our browser support list at
   <https://ci.testling.com/barberboy/dom-elements>.
-* The selectors passed to .query and .queryAll are currently evaluated *relative to 
-  the document*. According to [the spec], they should be [Relative Selectors] which are
-  scoped to the element(s). See [issue #2] for additional information, and
-  [Absolutizing a Relative Selector] if you're interested in adding that as an
-  enhancement.
-* Similarly, this implementation currently does not have support for CSS selectors
-  that start with a child selector. Implementing proper support for [Relative Selectors] 
-  will resolve this as well.
 
 [Relative Selectors]: http://dev.w3.org/csswg/selectors/#relative
 [the spec]: http://dom.spec.whatwg.org/#match-a-relative-selectors-string
 [issue #2]: https://github.com/barberboy/dom-elements/issues/2
 [Absolutizing a Relative Selector]: http://dev.w3.org/csswg/selectors/#absolutizing
 
-To Do
------
-
-* Add support for child (and sibling?) selectors
-* Better tests
 
 License
 -------

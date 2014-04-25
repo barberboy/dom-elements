@@ -1,0 +1,14 @@
+{
+  "eqeqeq": false,
+  "eqnull": true,
+  "quotmark": "single",
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "browser": true,
+  "predef": [
+    "require",
+    "module",
+    "exports"
+  ]
+}

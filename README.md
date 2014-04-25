@@ -47,7 +47,7 @@ dom-elements.min.js in the `lib` directory.
     npm install
     npm start
 
-### .query(selector)
+### .query(relativeSelector)
 
 `.query()` is available on document, documentFragments, individual DOM elements,
 and the Elements class. It will return the first descendant element which
@@ -58,7 +58,7 @@ matches the selector, or null if there are zero matches.
       var active = siteHeader.query('.site-menu .active');
     }
 
-### .queryAll(selector)
+### .queryAll(relativeSelector)
 
 .queryAll is available on document, documentFragments, individual DOM elements
 and the Elements class. It will return a new instance of Elements containing

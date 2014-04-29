@@ -9,8 +9,7 @@ filter, forEach, and the like on the returned elements.
 [Elements class]: http://dom.spec.whatwg.org/#collections:-elements
 [the DOM Standard]: http://dom.spec.whatwg.org
 
-[![browser support](https://ci.testling.com/barberboy/dom-elements.png)
-](https://ci.testling.com/barberboy/dom-elements)
+[![The DOM Elements polyfill supports Internet Explorer 9+, Chrome 15.0+, Firefox 4.0+, Opera 12.0+, Safari 5.0.5+, Mobile Safari 6.0+.](https://ci.testling.com/barberboy/dom-elements.png)](https://ci.testling.com/barberboy/dom-elements)
 
 Background
 ----------

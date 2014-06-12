@@ -21,7 +21,8 @@
   },
   "main": "src/index.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "directories": {
     "src": "src",

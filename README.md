@@ -14,10 +14,10 @@ filter, forEach, and the like on the returned elements.
 Background
 ----------
 
-The DOM Standard added [query] and [queryAll] methods to the ParentNode
-interface, which is implemented by  Document, Element, and DocumentFragment. It
-also defined a new class, [Elements], which extends Array and also has query and
- queryAll.
+The DOM Standard added [`.query(relativeSelector)`][query] and [`.queryAll(relativeSelector)`][queryAll]
+methods to the ParentNode interface, which is implemented by  Document, Element, and 
+DocumentFragment. It also defined a new class, [Elements], which extends Array and also
+has `.query` and `.queryAll`.
 
 [Elements]: http://dom.spec.whatwg.org/#collections:-elements
 [query]: http://dom.spec.whatwg.org/#dom-parentnode-query
@@ -30,11 +30,15 @@ You can install the `dom-elements` package with either npm or bower, or directly
 download [dom-elements.js] or [dom-elements.min.js] and include them in your
 project.
 
-    bower install dom-elements
+```sh
+bower install dom-elements
+```
 
 or
 
-    npm install dom-elements
+```
+npm install dom-elements
+```
 
 [dom-elements.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.1.0/lib/dom-elements.js
 [dom-elements.min.js]: https://raw.githubusercontent.com/barberboy/dom-elements/0.1.0/lib/dom-elements.min.js
@@ -42,9 +46,11 @@ or
 You are also welcome to clone the repo directly and use the dom-elements.js or
 dom-elements.min.js in the `lib` directory.
 
-    git clone https://github.com/barberboy/dom-elements
-    npm install
-    npm start
+```sh
+git clone https://github.com/barberboy/dom-elements
+npm install
+npm start
+```
 
 ### .query(relativeSelector)
 
@@ -52,10 +58,12 @@ dom-elements.min.js in the `lib` directory.
 and the Elements class. It will return the first descendant element which
 matches the selector, or null if there are zero matches.
 
-    var siteHeader = document.query('header');
-    if (siteHeader) {
-      var active = siteHeader.query('.site-menu .active');
-    }
+```javascript
+var siteHeader = document.query('header');
+if (siteHeader) {
+  var active = siteHeader.query('.site-menu .active');
+}
+```
 
 ### .queryAll(relativeSelector)
 
@@ -64,17 +72,23 @@ and the Elements class. It will return a new instance of Elements containing
 descendants that match the passed selector, or an instance with no elements if
 there are no matches.
 
-    var collapsibles = document.queryAll('.collapsible');
-    collapsibles.forEach(function(collapsible){
-      var heading = collapsible.query('h1,h2,h3,h4,h5,h6');
-      heading.addEventListener('click', function(event) {
-        collapsible.classList.toggle('collapsed');
-      }, false);
-    });
+```javascript
+var collapsibles = document.queryAll('.collapsible');
 
-    // .query and .queryAll are available on the Elements array as well.
-    var sections = document.queryAll('section');
-    var headingLinks = sections.queryAll(':any(h1,h2,h3,h4,h5,h6) a');
+collapsibles.forEach(function(collapsible){
+  var heading = collapsible.query('h1,h2,h3,h4,h5,h6');
+  heading.addEventListener('click', function(event) {
+    collapsible.classList.toggle('collapsed');
+  }, false);
+});
+```
+
+The `.query` and `.queryAll` methods are also available on the Elements array returned by `.queryAll`.
+
+```javascript
+ var sections = document.queryAll('section');
+ var headingLinks = sections.queryAll(':any(h1,h2,h3,h4,h5,h6) a');
+```
 
 Caveats
 -------

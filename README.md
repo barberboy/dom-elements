@@ -1,6 +1,16 @@
 DOM Elements
 =============
 
+> ⚠️ Relying on Element#query and Element#queryAll is somewhat risky since they’ve been 
+  temporarily [removed from the current DOM Standard] due to significant implementation issues.
+  See related discussions on [Stack Overflow] and the [WHATWG's DOM spec] repository on GitHub, 
+  and use at your own risk.
+  
+  
+[Removed from the current DOM Standard]: https://github.com/whatwg/dom/commit/10b6cf1ba02806220d5461a3bdb7939728b73635#commitcomment-16881028
+[Stack Overflow]: https://stackoverflow.com/questions/23269785/whats-the-difference-between-queryall-and-queryselectorall/38245620#38245620
+[WHATWG's DOM spec]: https://github.com/whatwg/dom/issues/39#issuecomment-231056316
+
 DOM Elements is a polyfill that allows you to use the `.query` and `.queryAll`
 methods newly added to [the DOM Standard]. `queryAll` returns an instance of the
 new [Elements class] which extends Array, allowing you to use map, reduce,
